@@ -12,6 +12,5 @@ jobs:
 
       - name: Update Readme Activity
         uses: TheDanniCraft/activity-log@v1
-         with:
+        with:
           gh-token: ${{ secrets.GH_TOKEN }}
-          USERNAME: alvaromendieta
