@@ -4,13 +4,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  update:
+  run-assignment:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Update Readme Activity
-        uses: TheDanniCraft/activity-log@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run Assignment
+        uses: platzi/assignment@v3
         with:
           gh-token: ${{ secrets.GH_TOKEN }}
