@@ -1,15 +1,13 @@
-name: Update Activity
+name: Practice Workflow
 
 on:
   workflow_dispatch:
 
 jobs:
-  run-assignment:
+  example:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run Assignment
-        uses: platzi/assignment@v3
-        with:
-          gh-token: ${{ secrets.GH_TOKEN }}
+      - name: Echo Hello
+        run: echo "Hola Alvaro, estás ejecutando tu primer workflow!"
