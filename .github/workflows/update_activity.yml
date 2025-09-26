@@ -1,0 +1,17 @@
+name: Update Activity
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Update Readme Activity
+        uses: TheDanniCraft/activity-log@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          USERNAME: alvaromendieta
